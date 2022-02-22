@@ -1,0 +1,4 @@
+Attempts: 3
+P indefication: 0
+P_1: 0,33
+P_2: 0

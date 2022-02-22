@@ -1,0 +1,30 @@
+C:\Users\User\source\repos\Lab_01 work\bin\Debug\net5.0-windows\Lab_01 work.exe
+C:\Users\User\source\repos\Lab_01 work\bin\Debug\net5.0-windows\Lab_01 work.deps.json
+C:\Users\User\source\repos\Lab_01 work\bin\Debug\net5.0-windows\Lab_01 work.runtimeconfig.json
+C:\Users\User\source\repos\Lab_01 work\bin\Debug\net5.0-windows\Lab_01 work.runtimeconfig.dev.json
+C:\Users\User\source\repos\Lab_01 work\bin\Debug\net5.0-windows\Lab_01 work.dll
+C:\Users\User\source\repos\Lab_01 work\bin\Debug\net5.0-windows\ref\Lab_01 work.dll
+C:\Users\User\source\repos\Lab_01 work\bin\Debug\net5.0-windows\Lab_01 work.pdb
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work_MarkupCompile.cache
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work_MarkupCompile.lref
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work.g.resources
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work.AssemblyInfo.cs
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work.dll
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\ref\Lab_01 work.dll
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work.pdb
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Lab_01 work.genruntimeconfig.cache
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Window1.g.cs
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Window1.baml
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\GameWin.g.cs
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\GameWin.baml
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Created.g.cs
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Created.baml
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Calculator.g.cs
+C:\Users\User\source\repos\Lab_01 work\obj\Debug\net5.0-windows\Calculator.baml

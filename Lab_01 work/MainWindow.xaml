@@ -1,0 +1,37 @@
+﻿<Window x:Class="Lab_01_work.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab_01_work"
+        mc:Ignorable="d"
+        Title="Головне вікно" Height="398" Width="754" WindowStyle="SingleBorderWindow" ResizeMode="NoResize" Icon="/3643769-building-home-house-main-menu-start_113416.ico">
+    <Grid Margin="0,1,-1,1" Visibility="Visible" RenderTransformOrigin="0.547,0.596">
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFCD0303" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+        <Grid.Style>
+            <Style/>
+        </Grid.Style>
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="-0.237"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.Background>
+            <ImageBrush ImageSource="/НЕБОСКРЕБЫ.jpg" Stretch="Fill" TileMode="None" Opacity="0.45"/>
+        </Grid.Background>
+        <Label Content="Головне меню" HorizontalAlignment="Left" Margin="244,9,0,0" VerticalAlignment="Top" Background="{x:Null}" FontSize="36" OpacityMask="#FF020202" FontWeight="Bold" FontFamily="Bahnschrift"/>
+        <Button x:Name="ToWin1" Content="Зчитування данних" HorizontalAlignment="Left" Height="34" Margin="250,100,0,0" VerticalAlignment="Top" Width="225" FontSize="18" FontFamily="Bahnschrift Light" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Click="ToWin1_Click"/>
+        <Button x:Name="ToWin2" Content="Хрестики-нолики" HorizontalAlignment="Left" Height="34" Margin="250,150,0,0" VerticalAlignment="Top" Width="225" FontSize="18" FontFamily="Bahnschrift Light" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Click="ToWin2_Click"/>
+        <Button x:Name="ToWin3" Content="Калькулятор" HorizontalAlignment="Left" Height="34" Margin="250,200,0,0" VerticalAlignment="Top" Width="225" FontSize="18" FontFamily="Bahnschrift Light" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Click="ToWin3_Click"/>
+        <Button x:Name="ToWin4" Content="Зробив роботу" HorizontalAlignment="Left" Height="34" Margin="250,250,0,0" VerticalAlignment="Top" Width="225" FontSize="18" FontFamily="Bahnschrift Light" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Click="ToWin4_Click"/>
+        <Button x:Name="ExitBut" Content="Вихід" HorizontalAlignment="Left" Height="34" Margin="250,300,0,0" VerticalAlignment="Top" Width="225" FontSize="18" FontFamily="Bahnschrift Light" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Click="ExitBut_Click"/>
+    </Grid>
+</Window>
