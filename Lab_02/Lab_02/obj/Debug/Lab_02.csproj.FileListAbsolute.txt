@@ -1,0 +1,15 @@
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\Lab_02.csprojAssemblyReference.cache
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\MainWindow.g.cs
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\App.g.cs
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\Lab_02_MarkupCompile.cache
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\Lab_02_MarkupCompile.lref
+D:\vs\projects\Lab_02\Lab_02\bin\Debug\Lab_02.exe.config
+D:\vs\projects\Lab_02\Lab_02\bin\Debug\Lab_02.exe
+D:\vs\projects\Lab_02\Lab_02\bin\Debug\Lab_02.pdb
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\MainWindow.baml
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\Lab_02.g.resources
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\Lab_02.Properties.Resources.resources
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\Lab_02.csproj.GenerateResource.cache
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\Lab_02.csproj.CoreCompileInputs.cache
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\Lab_02.exe
+D:\vs\projects\Lab_02\Lab_02\obj\Debug\Lab_02.pdb
