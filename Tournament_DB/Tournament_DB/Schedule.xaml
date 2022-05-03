@@ -1,0 +1,211 @@
+﻿<Window x:Class="Tournament_DB.Schedule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tournament_DB"
+        mc:Ignorable="d"
+        Title="Інформація про розклад" Height="600" Width="900" Icon="D:\study\курсач\Tournament_DB\Tournament_DB\images\айко.png" Background="#FF13161B">
+    <Window.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid  RenderTransformOrigin="0.501,0.512">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="Ігри" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="32" Width="75" Height="51" Margin="0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="0"/>
+        <Label x:Name="HomeTeam" Content="Команда 1" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="32" Width="295" Height="51" Margin="19,0,10,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1"/>
+        <Label x:Name="GuestTeam" Content="Команда 2" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="32" Width="305" Height="51" Margin="20,0,0,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="2"/>
+        <Image x:Name="Ht_img" Grid.Column="1" HorizontalAlignment="Left" Source="D:\study\курсач\Tournament_DB\Tournament_DB\images\мансити.png" Height="150" Margin="20,56,0,0" VerticalAlignment="Top" Width="150"/>
+        <Image x:Name="Gt_img" Grid.Column="2" HorizontalAlignment="Center" Height="150" Margin="150,53,25,0" VerticalAlignment="Top" Width="150" Source="D:\study\курсач\Tournament_DB\Tournament_DB\images\лив.png"/>
+        <Label Content="Склад" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="24" Width="83" Height="44" Margin="19,211,222,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1"/>
+        <DataGrid x:Name="Ht_Players" Grid.Column="1" HorizontalAlignment="Left" Height="244"
+                  Margin="19,255,0,0" VerticalAlignment="Top" Width="117"
+                  Background="#FF13161B" Foreground="#FFD6D6D6" BorderBrush="White" 
+                   AlternatingRowBackground="#FF13161B"  RowBackground="#FF13161B" HeadersVisibility="Column">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF0D0F13"/>
+                </Style>
+                <Style TargetType="ScrollBar">
+                    <Setter Property="Background" Value="#FF0D0F13"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label x:Name="Score_1" Content="0" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="130" Width="120" Height="160" Margin="194,46,10,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1" RenderTransformOrigin="0.321,0.857"/>
+        <Label x:Name="Score_2" Content="0" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="130" Width="108" Height="160" Margin="42,46,175,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="2" RenderTransformOrigin="0.421,0.862"/>
+        <DataGrid x:Name="Ht_Players_Scored" Grid.Column="1" HorizontalAlignment="Left" Height="167"
+            Margin="194,206,0,0" VerticalAlignment="Top" Width="120"
+            Background="#FF13161B" Foreground="#FFD6D6D6" BorderBrush="White" 
+            AlternatingRowBackground="#FF13161B"  RowBackground="#FF13161B" HeadersVisibility="Column">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF0D0F13"/>
+                </Style>
+                <Style TargetType="ScrollBar">
+                    <Setter Property="Background" Value="#FF0D0F13"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <DataGrid x:Name="Gt_Players_Scored" Grid.Column="2" HorizontalAlignment="Left" Height="167"
+            Margin="10,206,0,0" VerticalAlignment="Top" Width="120"
+            Background="#FF13161B" Foreground="#FFD6D6D6" BorderBrush="White" 
+            AlternatingRowBackground="#FF13161B"  RowBackground="#FF13161B" HeadersVisibility="Column">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF0D0F13"/>
+                </Style>
+                <Style TargetType="ScrollBar">
+                    <Setter Property="Background" Value="#FF0D0F13"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="Склад" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="24" Width="83" Height="44" Margin="190,211,52,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="2"/>
+        <DataGrid x:Name="Gt_Players" Grid.Column="2" HorizontalAlignment="Left" Height="244"
+            Margin="190,255,0,0" VerticalAlignment="Top" Width="117"
+            Background="#FF13161B" Foreground="#FFD6D6D6" BorderBrush="White" 
+            AlternatingRowBackground="#FF13161B"  RowBackground="#FF13161B" HeadersVisibility="Column">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF0D0F13"/>
+                </Style>
+                <Style TargetType="ScrollBar">
+                    <Setter Property="Background" Value="#FF0D0F13"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="Утримання м'яча: " HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="134" Height="32" Margin="141,408,49,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1"/>
+        <Label Content="Удари по воротам:" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="134" Height="32" Margin="141,440,49,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1"/>
+        <Label Content="Порушення правил:" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="134" Height="32" Margin="141,472,49,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1"/>
+        <Label Content="Статистика" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="20" Width="130" Height="34" Margin="268,373,251,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="Ht_Poss" Content="50" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="31" Height="28" Margin="275,408,18,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1"/>
+        <Label x:Name="Ht_Shots" Content="50" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="31" Height="28" Margin="275,440,18,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1"/>
+        <Label x:Name="Ht_Falls" Content="50" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="31" Height="28" Margin="275,472,18,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1"/>
+        <Label Content="Утримання м'яча: " HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="134" Height="32" Margin="9,408,182,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="2"/>
+        <Label Content="Удари по воротам:" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="134" Height="32" Margin="9,440,182,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="2"/>
+        <Label Content="Порушення правил:" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="134" Height="32" Margin="9,472,182,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="2"/>
+        <Label x:Name="Gt_Poss" Content="50" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="31" Height="28" Margin="143,408,151,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="2"/>
+        <Label x:Name="Gt_Shots" Content="50" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="31" Height="28" Margin="143,440,151,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="2"/>
+        <Label x:Name="Gt_Falls" Content="50" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="12" Width="31" Height="28" Margin="143,472,151,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="2"/>
+        <Label Content="Вартість квитка:" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="20" Width="158" Height="34" Margin="251,500,240,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1" Grid.ColumnSpan="2"/>
+        <Label x:Name="Cost" Content="40" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="18" Width="78" Height="30" Margin="85,504,162,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="2"/>
+        <Label Content="Дата:" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="20" Width="68" Height="34" Margin="10,526,246,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="1"/>
+        <Label x:Name="Date" Content="19\03\21 17:00" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="16" Width="163" Height="34" Margin="83,530,78,0" Foreground="#FFBBBBBB" FontFamily="Microsoft JhengHei" Grid.Column="1"/>
+        <DataGrid x:Name="Games" HorizontalAlignment="Left" Height="249"
+            Margin="10,255,0,0" VerticalAlignment="Top" Width="223"
+            Background="#FF13161B" Foreground="#FFD6D6D6" BorderBrush="White" 
+            AlternatingRowBackground="#FF13161B"  RowBackground="#FF13161B" HeadersVisibility="Column" SelectionChanged="Games_SelectionChanged" SelectionMode="Single">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="#FF0D0F13"/>
+                </Style>
+                <Style TargetType="ScrollBar">
+                    <Setter Property="Background" Value="#FF0D0F13"/>
+                </Style>
+            </DataGrid.Resources>
+        </DataGrid>
+        <Label Content="Стадіон" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="24" Width="102" Height="46" Margin="10,53,131,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="0"/>
+        <ComboBox x:Name="Stadium"  HorizontalAlignment="Left" Margin="111,66,0,0" VerticalAlignment="Top" Width="122" SelectionChanged="Stadium_SelectionChanged"/>
+        <Label Content="Дата:" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="24" Width="82" Height="40" Margin="9,92,152,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="0"/>
+        <ComboBox x:Name="Day" HorizontalAlignment="Left" Margin="111,106,0,0" VerticalAlignment="Top" Width="57"/>
+        <ComboBox x:Name="Month" HorizontalAlignment="Left" Margin="173,106,0,0" VerticalAlignment="Top" Width="57" RenderTransformOrigin="-0.109,0.5" SelectionChanged="Month_SelectionChanged"/>
+        <Button x:Name="Search_But" Content="Пошук" HorizontalAlignment="Center" Margin="10,0,10,329" 
+            VerticalAlignment="Bottom" Width="223" Height="30" FontSize="18"  Foreground="#FFB0B0B0" 
+            MouseEnter="Button_MouseEnter"
+            MouseLeave="Button_MouseLeave" BorderThickness="10" Style="{StaticResource MyButton}" Click="Search_But_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FF1C2B46" Offset="0.006"/>
+                    <GradientStop Color="#FF101317" Offset="1"/>
+                    <GradientStop Color="#FF12161C" Offset="0.87"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Button x:Name="Exit_But" Content="Вихід" HorizontalAlignment="Center" Margin="10,0,13,14" 
+            VerticalAlignment="Bottom" Width="220" Height="40" FontSize="24"  Foreground="#FFB0B0B0" 
+            MouseEnter="Button_MouseEnter"
+            MouseLeave="Button_MouseLeave" BorderThickness="10" Style="{StaticResource MyButton}" Click="Exit_But_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FF1C2B46" Offset="0.006"/>
+                    <GradientStop Color="#FF101317" Offset="1"/>
+                    <GradientStop Color="#FF12161C" Offset="0.87"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Separator HorizontalAlignment="Left" Height="100" Margin="-41,235,0,0" VerticalAlignment="Top" Width="570" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Background="White">
+            <Separator.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.014"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Separator.RenderTransform>
+        </Separator>
+        <Label Content="Команда 1:" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="14" Width="82" Height="29" Margin="10,139,151,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="0"/>
+        <Label Content="Команда 2:" HorizontalAlignment="Center" VerticalAlignment="Top" 
+            FontSize="14" Width="82" Height="29" Margin="10,168,151,0" Foreground="#FFFEFEFE" FontFamily="Microsoft JhengHei" Grid.Column="0"/>
+        <ComboBox x:Name="Ht_Team" HorizontalAlignment="Left" Margin="97,146,0,0" VerticalAlignment="Top" Width="133" SelectionChanged="Ht_Team_SelectionChanged"/>
+        <ComboBox x:Name="Gt_Team" HorizontalAlignment="Left" Margin="97,173,0,0" VerticalAlignment="Top" Width="133" SelectionChanged="Gt_Team_SelectionChanged"/>
+        <Button x:Name="Clear_But" Content="Стерти" HorizontalAlignment="Center" Margin="164,0,13,523" 
+            VerticalAlignment="Bottom" Width="66" Height="30" FontSize="18"  Foreground="#FFB0B0B0" 
+            MouseEnter="Button_MouseEnter"
+            MouseLeave="Button_MouseLeave" BorderThickness="10" Style="{StaticResource MyButton}" Click="Clear_But_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FF1C2B46" Offset="0.006"/>
+                    <GradientStop Color="#FF101317" Offset="1"/>
+                    <GradientStop Color="#FF12161C" Offset="0.87"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</Window>

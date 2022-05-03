@@ -1,0 +1,67 @@
+﻿<Window x:Class="Tournament_DB.AddPlayer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tournament_DB"
+        mc:Ignorable="d"
+        Title="Додати гравця" Height="250" Width="360" Background="#FF13161B" Icon="D:\study\курсач\Tournament_DB\Tournament_DB\images\player.png" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style x:Key="MyButton" TargetType="Button">
+            <Setter Property="OverridesDefaultStyle" Value="True" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Name="border" BorderThickness="0" BorderBrush="Black" Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.8" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Button x:Name="Close_But"  Style="{StaticResource MyButton}" Content="Закрити" HorizontalAlignment="Left"
+                Margin="232,152,0,0" VerticalAlignment="Top" Width="109" Foreground="#FFB8B8B8" Height="36" Click="Close_But_Click" MouseLeave="Button_MouseLeave" MouseEnter="Button_MouseEnter">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FF1C2B46" Offset="0.006"/>
+                    <GradientStop Color="#FF101317" Offset="1"/>
+                    <GradientStop Color="#FF12161C" Offset="0.87"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Label Content="Ім'я" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="#FFD4D4D4" Width="54"/>
+        <Label Content="Фамілія" HorizontalAlignment="Left" Margin="180,10,0,0" VerticalAlignment="Top" Foreground="#FFD4D4D4"/>
+        <Label Content="Позиція" HorizontalAlignment="Left" Margin="10,40,0,0" VerticalAlignment="Top" Foreground="#FFD4D4D4"/>
+        <Label Content="Нація" HorizontalAlignment="Left" Margin="180,40,0,0" VerticalAlignment="Top" Foreground="#FFD4D4D4" Width="51"/>
+        <Label Content="Вік" HorizontalAlignment="Left" Margin="10,70,0,0" VerticalAlignment="Top" Foreground="#FFD4D4D4" Width="54"/>
+        <Label Content="Номер" HorizontalAlignment="Left" Margin="180,70,0,0" VerticalAlignment="Top" Foreground="#FFD4D4D4" Width="54"/>
+        <Label Content="Дата народження" HorizontalAlignment="Left" Margin="10,100,0,0" VerticalAlignment="Top" Foreground="#FFD4D4D4"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Height="22" Margin="70,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="Surname" HorizontalAlignment="Left" Height="22" Margin="236,12,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="Age" HorizontalAlignment="Left" Height="22" Margin="70,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105"/>
+        <TextBox x:Name="Number" HorizontalAlignment="Left" Height="22" Margin="236,72,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="105"/>
+        <ComboBox x:Name="Country" HorizontalAlignment="Left" Margin="236,42,0,0" VerticalAlignment="Top" Width="105"/>
+        <ComboBox x:Name="Day" HorizontalAlignment="Left" Margin="130,104,0,0" VerticalAlignment="Top" Width="46"/>
+        <ComboBox x:Name="Month" HorizontalAlignment="Left" Margin="185,104,0,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.5,0.455" SelectionChanged="Month_SelectionChanged"/>
+        <Button x:Name="Add_But"  Style="{StaticResource MyButton}" Content="Додати" HorizontalAlignment="Left"
+            Margin="10,152,0,0" VerticalAlignment="Top" Width="132" Foreground="#FFB8B8B8" Height="36" Click="Add_But_Click" FontSize="16" MouseLeave="Button_MouseLeave" MouseEnter="Button_MouseEnter">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                    <GradientStop Color="#FF1C2B46" Offset="0.006"/>
+                    <GradientStop Color="#FF101317" Offset="1"/>
+                    <GradientStop Color="#FF12161C" Offset="0.87"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <ComboBox x:Name="Position" HorizontalAlignment="Left" Margin="71,42,0,0" VerticalAlignment="Top" Width="105"/>
+
+    </Grid>
+</Window>
